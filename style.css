@@ -21,7 +21,7 @@
 }
 
 body {
-  background-color: var(--white);
+  background-color: var(--pale-blue);
   color: var(--dark-gray-blue);
   display: flex;
   justify-content: center;
@@ -29,12 +29,11 @@ body {
 }
 
 p {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 .result-header {
   text-align: center;
-  margin-bottom: 20px;
   background: linear-gradient(
     to bottom,
     var(--light-slate-blue),
@@ -62,12 +61,12 @@ p {
 }
 
 .result-header p {
-    margin-top: 12px;
-    font-weight: 500;
+  margin-top: 12px;
+  font-weight: 500;
 }
 
 .score-circle {
-  width:150px;
+  width: 150px;
   height: 150px;
   border-radius: 50%;
   background: linear-gradient(
@@ -83,20 +82,22 @@ p {
 }
 
 .out-of {
-    font-weight: 500;
+  font-weight: 500;
 }
 
 .summary {
   padding: 20px;
   display: flex;
   flex-direction: column;
+  background-color: var(--white);
 }
 
 .summary-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 15px 0; font-weight: 700;
+  margin: 15px 0;
+  font-weight: 700;
 }
 
 .summary-item:nth-of-type(1) {
@@ -127,11 +128,11 @@ p {
 }
 
 .summary-item .score {
-    color: var(--dark-gray-blue)
+  color: var(--dark-gray-blue);
 }
 
 .summary-item .out-of-onehundred {
-    color: silver;
+  color: silver;
 }
 
 .memory-item {
@@ -168,10 +169,58 @@ p {
 }
 
 .continue-button {
-    background-color: var(--dark-gray-blue);
-    border: none;
-    padding: 13px;
-    border-radius: 25px;
-    color: var(--white);
+  background-color: var(--dark-gray-blue);
+  border: none;
+  padding: 13px;
+  border-radius: 25px;
+  color: var(--white);
+  font-weight: 700;
+}
+
+.continue-button:hover {
+  background: linear-gradient(
+    to bottom,
+    var(--light-slate-blue),
+    var(--light-royal-blue)
+  );
+}
+
+@media (min-width: 376px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .result-container {
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+  }
+
+  .result-header {
+    max-width: 17em;
+    border-radius: 15px;
+    margin: 0;
+  }
+
+  .result-header h5 {
+    font-size: 18px;
+  }
+
+  .result-header p {
+    font-size: 15px;
+    padding: 0 12px;
     font-weight: 500;
+  }
+
+  .summary {
+    width: 23em;
+    border-radius: 0 15px 15px 0;
+  }
+
+  .summary-item {
+    margin: 11px 0;
+  }
 }
